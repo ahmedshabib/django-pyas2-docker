@@ -1,4 +1,4 @@
-FROM python:3.7-alpine3.9
+FROM python:3.7
 
 # Update the index of available packages
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
