@@ -12,7 +12,8 @@ RUN pip install django-pyas2
 # Copy the files from the project directory to the container
 WORKDIR /
 COPY django_pyas2 django_pyas2
-CMD ["/usr/local/bin/python", "/django_pyas2/manage.py", "runserver", "0.0.0.0:8000"]
+CMD echo "123
+#CMD ["/usr/local/bin/python", "/django_pyas2/manage.py", "runserver", "0.0.0.0:8000"]
 
 # AS2 Server
-EXPOSE 8000
+#EXPOSE 8000
