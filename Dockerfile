@@ -1,11 +1,8 @@
-FROM python:3.7
+FROM python:3.7-alpine
 
-# Update the index of available packages
-ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
-RUN apt update
+ENV PYTHONUNBUFFERED 1
 
-# Install packages required for Python cryptography
-RUN apt add --update \
+RUN apk add --update \
   build-base \
   cairo \
   cairo-dev \
