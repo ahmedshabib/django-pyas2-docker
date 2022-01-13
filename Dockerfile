@@ -2,10 +2,10 @@ FROM python:3.7
 
 # Update the index of available packages
 ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
-RUN apk update
+RUN apt update
 
 # Install packages required for Python cryptography
-RUN apk add --update \
+RUN apt add --update \
   build-base \
   cairo \
   cairo-dev \
