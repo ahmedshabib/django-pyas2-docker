@@ -5,8 +5,32 @@ ENV CRYPTOGRAPHY_DONT_BUILD_RUST=1
 RUN apk update
 
 # Install packages required for Python cryptography
-RUN apk add --no-cache openssl-dev gcc libffi-dev musl-dev
-
+RUN apk add --update \
+  build-base \
+  cairo \
+  cairo-dev \
+  cargo \
+  freetype-dev \
+  gcc \
+  gdk-pixbuf-dev \
+  gettext \
+  jpeg-dev \
+  lcms2-dev \
+  libffi-dev \
+  musl-dev \
+  openjpeg-dev \
+  openssl-dev \
+  pango-dev \
+  poppler-utils \
+  postgresql-client \
+  postgresql-dev \
+  py-cffi \
+  python3-dev \
+  rust \
+  tcl-dev \
+  tiff-dev \
+  tk-dev \
+  zlib-dev
 # Install django-pyas2 with pip
 RUN pip install django-pyas2
 
